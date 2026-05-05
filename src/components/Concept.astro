@@ -1,0 +1,66 @@
+---
+---
+<section id="concept" class="section concept">
+	<div class="container grid">
+		<div class="content">
+			<h2 class="section-title">Concept</h2>
+			<h3 class="concept-title">都会の真ん中で、<br />自分たちらしい時間を。</h3>
+			<p>
+				「渋空」は、渋谷駅から徒歩圏内にありながら、落ち着いた時間を提供するために誕生しました。
+				高い天井と大きな窓から差し込む光が、クリエイティブな発想や深い対話をサポートします。
+			</p>
+			<p>
+				会議室としての利用はもちろん、写真撮影や動画配信、小規模なセミナーやワークショップなど、
+				用途に合わせて自由なレイアウトでご利用いただけます。
+			</p>
+		</div>
+		<div class="image-placeholder">
+			<div class="placeholder-inner">
+				<span>Space Image</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+	.section-title {
+		font-size: 0.9rem;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		margin-bottom: 1rem;
+	}
+	.concept-title {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		line-height: 1.4;
+	}
+	.content p {
+		margin-bottom: 1.5rem;
+		color: var(--text-muted);
+	}
+	.image-placeholder {
+		aspect-ratio: 4/3;
+		background: #f1f5f9;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.placeholder-inner {
+		color: #94a3b8;
+		font-weight: 700;
+	}
+	@media (max-width: 768px) {
+		.grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+</style>

@@ -1,0 +1,58 @@
+---
+const amenities = [
+	{ name: '高速 Wi-Fi', icon: '📶' },
+	{ name: '大型モニター', icon: '📺' },
+	{ name: 'ホワイトボード', icon: '📝' },
+	{ name: 'プロジェクター', icon: '📹' },
+	{ name: '延長コード', icon: '🔌' },
+	{ name: 'コーヒーサーバー', icon: '☕' },
+];
+---
+<section id="amenities" class="section amenities">
+	<div class="container">
+		<h2 class="section-title">Amenities</h2>
+		<div class="amenity-grid">
+			{amenities.map(item => (
+				<div class="amenity-card">
+					<span class="icon">{item.icon}</span>
+					<span class="name">{item.name}</span>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.section-title {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		margin-bottom: 3rem;
+	}
+	.amenity-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+	}
+	.amenity-card {
+		background: var(--bg-alt);
+		padding: 2rem;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform 0.2s;
+	}
+	.amenity-card:hover {
+		transform: translateY(-5px);
+	}
+	.icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	.name {
+		font-weight: 700;
+	}
+</style>

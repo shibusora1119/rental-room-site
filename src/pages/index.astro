@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Concept from '../components/Concept.astro';
+import Amenities from '../components/Amenities.astro';
+import Access from '../components/Access.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="渋谷のレンタルスペース">
+	<Header />
+	<main>
+		<Hero />
+		<Concept />
+		<Amenities />
+		<Access />
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		overflow-x: hidden;
+	}
+</style>

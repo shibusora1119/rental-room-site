@@ -1,0 +1,80 @@
+---
+---
+<section id="access" class="section access">
+	<div class="container">
+		<h2 class="section-title">Access</h2>
+		<div class="access-grid">
+			<div class="map-container">
+				<!-- Placeholder for Google Maps -->
+				<div class="map-placeholder">
+					<p>Google Maps 埋め込みエリア</p>
+					<p class="address-hint">渋谷区東１－１１－９</p>
+				</div>
+			</div>
+			<div class="info">
+				<div class="info-group">
+					<h3>所在地</h3>
+					<p>〒150-0011<br />東京都渋谷区東１－１１－９</p>
+				</div>
+				<div class="info-group">
+					<h3>アクセス</h3>
+					<ul>
+						<li>JR「渋谷駅」東口 徒歩10分</li>
+						<li>東京メトロ「表参道駅」徒歩12分</li>
+					</ul>
+				</div>
+				<div class="info-group">
+					<h3>営業時間</h3>
+					<p>09:00 - 21:00 (年中無休)</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section-title {
+		font-size: 0.9rem;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		margin-bottom: 3rem;
+	}
+	.access-grid {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 3rem;
+	}
+	.map-placeholder {
+		width: 100%;
+		height: 400px;
+		background: #e2e8f0;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: #64748b;
+	}
+	.address-hint {
+		margin-top: 1rem;
+		font-size: 0.8rem;
+	}
+	.info-group {
+		margin-bottom: 2rem;
+	}
+	.info-group h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0.75rem;
+		border-left: 3px solid var(--accent);
+		padding-left: 1rem;
+	}
+	.info-group li {
+		margin-bottom: 0.5rem;
+	}
+	@media (max-width: 768px) {
+		.access-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
