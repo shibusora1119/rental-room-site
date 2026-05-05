@@ -1,0 +1,116 @@
+---
+---
+<section id="contact" class="section contact">
+	<div class="container">
+		<h2 class="section-title">Contact</h2>
+		<div class="contact-card">
+			<h3 class="contact-header">お問い合わせ</h3>
+			<p class="contact-description">
+				スペースのご利用に関するご質問や、内覧のご希望など、お気軽にお問い合わせください。
+			</p>
+			
+			<div class="contact-methods">
+				<div class="method">
+					<h4>メールでのお問い合わせ</h4>
+					<p id="email-container" class="email-text">
+						<!-- JavaScriptで難読化して表示 -->
+						<button id="show-email" class="btn-reveal">メールアドレスを表示</button>
+					</p>
+				</div>
+				
+				<div class="method">
+					<h4>公式フォーム</h4>
+					<p>外部の問い合わせフォームを利用して、安全にメッセージを送信いただけます。</p>
+					<a href="#" class="btn-link">問い合わせフォームを開く (準備中)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	// シンプルなボット対策: メールアドレスをバラバラにして結合する
+	const user = "info";
+	const domain = "shibusora.com";
+	
+	const showEmailBtn = document.getElementById('show-email');
+	const emailContainer = document.getElementById('email-container');
+	
+	if (showEmailBtn && emailContainer) {
+		showEmailBtn.addEventListener('click', () => {
+			const email = `${user}@${domain}`;
+			emailContainer.innerHTML = `<a href="mailto:${email}" class="email-link">${email}</a>`;
+		});
+	}
+</script>
+
+<style>
+	.section-title {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		margin-bottom: 3rem;
+	}
+	.contact-card {
+		background: var(--bg-alt);
+		padding: 3rem;
+		border-radius: 12px;
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.contact-header {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
+	.contact-description {
+		color: var(--text-muted);
+		margin-bottom: 3rem;
+	}
+	.contact-methods {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		text-align: left;
+	}
+	.method h4 {
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+		color: var(--text-main);
+	}
+	.email-text {
+		font-weight: 700;
+		color: var(--accent);
+	}
+	.btn-reveal {
+		background: none;
+		border: 1px solid var(--accent);
+		color: var(--accent);
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 0.9rem;
+		transition: all 0.2s;
+	}
+	.btn-reveal:hover {
+		background: var(--accent);
+		color: #fff;
+	}
+	.btn-link {
+		display: inline-block;
+		margin-top: 1rem;
+		color: var(--accent);
+		text-decoration: underline;
+		font-size: 0.9rem;
+	}
+	@media (max-width: 768px) {
+		.contact-methods {
+			grid-template-columns: 1fr;
+		}
+		.contact-card {
+			padding: 2rem 1.5rem;
+		}
+	}
+</style>
